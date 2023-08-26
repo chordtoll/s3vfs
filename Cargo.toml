@@ -1,0 +1,11 @@
+[package]
+name = "s3vfs"
+description = "A library for exposing structured data as an S3-compatible interface"
+version = "0.0.0"
+edition = "2021"
+license = "MIT"
+repository = "https://github.com/chordtoll/s3vfs.git"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
