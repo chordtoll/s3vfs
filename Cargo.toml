@@ -1,7 +1,7 @@
 [package]
 name = "s3vfs"
 description = "A library for exposing structured data as an S3-compatible interface"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license = "MIT"
 repository = "https://github.com/chordtoll/s3vfs.git"
@@ -12,3 +12,8 @@ repository = "https://github.com/chordtoll/s3vfs.git"
 async-trait = "0.1.73"
 chrono = "0.4.26"
 thiserror = "1.0.47"
+tokio = { version = "1.32.0", features = ["macros", "rt"] }
+
+[dev-dependencies]
+maplit = "1.0.2"
+

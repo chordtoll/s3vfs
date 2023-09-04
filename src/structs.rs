@@ -1,3 +1,5 @@
+use std::path::PathBuf;
+
 use chrono::{DateTime, Utc};
 use thiserror::Error;
 
@@ -10,10 +12,10 @@ pub struct File {
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct ListItem {
-    key: String,
-    last_modified: DateTime<Utc>,
-    size: usize,
-    etag: String,
+    pub(crate) key: PathBuf,
+    pub(crate) last_modified: DateTime<Utc>,
+    pub(crate) size: usize,
+    pub(crate) etag: String,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]

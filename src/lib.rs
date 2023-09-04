@@ -3,6 +3,8 @@ use std::path::PathBuf;
 use async_trait::async_trait;
 use structs::{File, List, S3Result};
 
+pub mod helpers;
+pub mod memory;
 pub mod structs;
 
 #[async_trait]
