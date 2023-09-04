@@ -1,14 +1,14 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+use std::path::PathBuf;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+use async_trait::async_trait;
+use structs::{File, List, S3Result};
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+pub mod structs;
+
+#[async_trait]
+pub trait S3 {
+    async fn list(&self) -> S3Result<List>;
+    async fn get(&self, key: PathBuf) -> S3Result<File>;
+    async fn put(&self, key: PathBuf, value: File) -> S3Result<()>;
+    async fn delete(&self, key: PathBuf) -> S3Result<()>;
 }
