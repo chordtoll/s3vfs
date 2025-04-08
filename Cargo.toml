@@ -12,7 +12,7 @@ repository = "https://github.com/chordtoll/s3vfs.git"
 async-trait = "0.1.73"
 chrono = "0.4.26"
 thiserror = "1.0.47"
-tokio = { version = "1.32.0", features = ["macros", "rt"] }
+tokio = { version = "1.38.2", features = ["macros", "rt"] }
 
 [dev-dependencies]
 maplit = "1.0.2"
